@@ -15,6 +15,7 @@ function App() {
   const [showGdprModal, setShowGdprModal] = useState(false);
 
   useEffect(() => {
+    console.log('App component mounted');
     // Load or create session
     let currentSession = chatService.loadLastSession();
     if (!currentSession) {
@@ -24,7 +25,10 @@ function App() {
     
     setSession(currentSession);
     setMessages(currentSession.messages);
+    console.log('Session loaded:', currentSession);
   }, []);
+
+  console.log('App render - session:', session, 'messages:', messages.length);
 
   const handleSendMessage = async (content: string) => {
     if (!session || isLoading) return;
