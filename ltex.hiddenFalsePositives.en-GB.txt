@@ -1,0 +1,4 @@
+{"rule":"WANNA","sentence":"^\\QNotes people may wanna know:\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\Qblacklists:\nDeepwiki\nAll \\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-|Dummy\\+|Dummy's\\+)[0-9]+\\Q domains (sorry Anguilla)\nnixos.wiki (official wiki.nixos.org exists)\nelderscrolls.fandom.com (UESP better and fuck fandom)\nfallout.fandom.com (fallout.wiki better and fuck fandom)\nminecraft.fandom.com (minecraft.wiki better and fuck fandom)\\E$"}
+{"rule":"LC_AFTER_PERIOD","sentence":"^\\Qblacklists:\nDeepwiki\nAll \\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-|Dummy\\+|Dummy's\\+)[0-9]+\\Q domains (sorry Anguilla)\nnixos.wiki (official wiki.nixos.org exists)\nelderscrolls.fandom.com (UESP better and fuck fandom)\nfallout.fandom.com (fallout.wiki better and fuck fandom)\nminecraft.fandom.com (minecraft.wiki better and fuck fandom)\\E$"}
+{"rule":"SETUP_VERB","sentence":"^\\QHow to Setup:\\E$"}
