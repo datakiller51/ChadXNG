@@ -1,9 +1,849 @@
 # see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
-use_default_settings: true
-server:
-  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: "ultrasecretkey"  # change this!
-  limiter: false  # enable this when running the instance for a public usage on the internet
-  image_proxy: true
+use_default_settings:
+  engines:
+    keep_only:
+      - 1337x
+      - 9gag
+      - adobe stock
+      - adobe stock audio
+      - adobe stock video
+      - alpine linux packages
+      - anaconda
+      - annas archive
+      - arch linux wiki
+      - artstation
+      - askubuntu
+      - bandcamp
+      - bitbucket
+      - cachy os packages
+      - caddy.community
+      - codeberg
+      - crates.io
+      - currency
+      - dailymotion
+      - ddg definitions
+      - deezer
+      - devicons
+      - dictzone
+      - discuss.python
+      - docker hub
+      - duckduckgo
+      - duckduckgo images
+      - duckduckgo news
+      - duckduckgo videos
+      - duckduckgo weather
+      - emojipedia
+      - findthatmeme
+      - flickr
+      - free software directory
+      - genius
+      - gentoo
+      - gitea.com
+      - github
+      - github code
+      - gitlab
+      - goodreads
+      - google
+      - google images
+      - google news
+      - google scholar
+      - google videos
+      - hackernews
+      - hoogle
+      - imdb
+      - imgur
+      - lib.rs
+      - library genesis
+      - library of congress
+      - lobste.rs
+      - lucide
+      - mankier
+      - mastodon hashtags
+      - mastodon users
+      - matrixrooms
+      - mdn
+      - metacpan
+      - minecraft wiki
+      - mixcloud
+      - mojeek
+      - mojeek images
+      - mojeek news
+      - nixos wiki
+      - npm
+      - nyaa
+      - odysee
+      - openalex
+      - openclipart
+      - openlibrary
+      - openstreetmap
+      - openverse
+      - pdbe
+      - peertube
+      - pi-hole.community
+      - pinterest
+      - pixabay images
+      - pixabay videos
+      - pkg.go.dev
+      - presearch
+      - presearch images
+      - presearch news
+      - presearch videos
+      - pub.dev
+      - public domain image archive
+      - pubmed
+      - pypi
+      - qwant
+      - qwant images
+      - qwant news
+      - qwant videos
+      - reddit
+      - repology
+      - reuters
+      - rottentomatoes
+      - rubygems
+      - searchcode code
+      - searchmysite
+      - sepiasearch
+      - soundcloud
+      - sourcehut
+      - springer nature
+      - stackoverflow
+      - startpage
+      - startpage images
+      - startpage news
+      - steam 
+      - superuser
+      - svgrepo
+      - tineye
+      - tmdb
+      - tokyotoshokan
+      - tootfinder
+      - unsplash
+      - uxwing
+      - vimeo
+      - voidlinux
+      - wallhaven
+      - wiby
+      - wikibooks
+      - wikicommons.audio
+      - wikicommons.files
+      - wikicommons.images
+      - wikicommons.videos
+      - wikidata
+      - wikinews
+      - wikipedia
+      - wikiquote
+      - wikisource
+      - wikispecies
+      - wikiversity
+      - wikivoyage
+      - wiktionary
+      - youtube
+      - z-library
+
 redis:
   url: redis://redis:6379/0
+
+general:
+  debug: false
+  instance_name: "SearXNG"
+  donation_url: "https://www.patreon.com/c/ingenarelNeoJesus"
+  enable_metrics: false
+
+search:
+  safe_search: 0
+  favicon_resolver: "duckduckgo"
+  max_page: 0
+  default_lang: "en"
+
+hostnames:
+  replace:
+    # '(.*\.)?youtube\.com$': 'yt.example.com'
+    # '(.*\.)?youtu\.be$': 'yt.example.com'
+    '(.*\.)?reddit(media)?\.com$': 'redlib.catsarch.com'
+    '(.*\.)?redd\.it$': 'redlib.catsarch.com'
+    '(www\.)?twitter\.com$': 'nitter.net'
+    'genius.com$': 'intellectual.catsarch.com'
+  remove:
+    - 'deepwiki\.(com|org)' # ai bullshit
+    - '.+\.ai' # 90% are ai bullshit, sorry Anguilla
+    - 'nixos.wiki' # official wiki exists
+    - 'elderscrolls.fandom.com' # fuck fandom UESP better
+    - 'fallout.fandom.com' # community wiki better
+    - 'minecraft.fandom.com' # official minecraft wiki better
+  # low_priority:
+  high_priority:
+    - '(.*\.)?wikipedia.org$' # wikipedia my GOAT
+
+server:
+  limiter: false  # enable this when running the instance for a public usage on the internet
+  image_proxy: true
+
+categories_as_tabs:
+  general:
+  images:
+  videos:
+  audio:
+  music:
+  lyrics:
+  news:
+  maps:
+  packages:
+  repos:
+  resources:
+  files:
+  forums:
+  social media:
+
+engines:
+  - name: 1337x
+    disabled: false
+    categories: ["files"]
+    weight: 2
+    timeout: 10
+
+  - name: 9gag
+    categories: ["images", "social media", "general"]
+    weight: 0.5
+    disabled: false
+    timeout: 10
+
+  - name: adobe stock
+    categories: ["images", "videos"]
+    weight: 0.5
+    disabled: false
+    timeout: 10
+
+  - name: adobe stock audio
+    categories: ["audio"]
+    weight: 0.5
+    disabled: false
+    timeout: 10
+
+  - name: adobe stock video
+    categories: ["videos"]
+    weight: 0.5
+    disabled: false
+    timeout: 10
+
+  - name: alpine linux packages
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: anaconda
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: annas archive
+    categories: ["files"]
+    disabled: false
+    timeout: 10
+
+  - name: arch linux wiki
+    categories: ["general", "resources"]
+    weight: 2
+    disabled: false
+    timeout: 10
+
+  - name: artstation
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: askubuntu
+    categories: ["general", "forums"]
+    disabled: false
+    timeout: 10
+
+  - name: bandcamp
+    categories: ["music"]
+    disabled: false
+    timeout: 10
+
+  - name: bitbucket
+    categories: ["repos"]
+    disabled: false
+    timeout: 10
+
+  - name: cachy os packages
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: caddy.community
+    categories: ["general", "forums"]
+    disabled: false
+    timeout: 10
+
+  - name: codeberg
+    categories: ["repos"]
+    disabled: false
+    timeout: 10
+
+  - name: crates.io
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: currency
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: dailymotion
+    categories: ["videos"]
+    disabled: false
+    timeout: 10
+
+  - name: ddg definitions
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: deezer
+    categories: ["music"]
+    disabled: false
+    timeout: 10
+
+  - name: devicons
+    categories: ["images", "general"]
+    disabled: false
+    timeout: 10
+
+  - name: dictzone
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: discuss.python
+    categories: [ "general", "forums"]
+    disabled: false
+    timeout: 10
+
+  - name: docker hub
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: duckduckgo
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: duckduckgo images
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: duckduckgo news
+    categories: ["news"]
+    disabled: false
+    timeout: 10
+
+  - name: duckduckgo videos
+    categories: ["videos"]
+    disabled: false
+    timeout: 10
+
+  - name: duckduckgo weather
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: emojipedia
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: findthatmeme
+    categories: ["general", "images"]
+    weight: 0.5
+    disabled: false
+    timeout: 10
+
+  - name: flickr
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: free software directory
+    categories: ["repos"]
+    disabled: false
+    timeout: 10
+
+  - name: genius
+    categories: ["lyrics"]
+    disabled: false
+    timeout: 10
+
+  - name: gentoo
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: gitea.com
+    categories: ["repos"]
+    disabled: false
+    timeout: 10
+
+  - name: github
+    categories: ["repos"]
+    disabled: false
+    timeout: 10
+
+  - name: github code
+    categories: ["general", "repos"]
+    disabled: false
+    timeout: 10
+
+  - name: gitlab
+    categories: ["repos"]
+    disabled: false
+    timeout: 10
+
+  - name: goodreads
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: google
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: google images
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: google news
+    categories: ["news"]
+    disabled: false
+    timeout: 10
+
+  - name: google scholar
+    categories: ["general", "resources"]
+    disabled: false
+    timeout: 10
+
+  - name: google videos
+    categories: ["videos"]
+    disabled: false
+    timeout: 10
+
+  - name: hackernews
+    categories: ["general", "forums"]
+    disabled: false
+    timeout: 10
+
+  - name: hoogle
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: imdb
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: imgur
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: lib.rs
+    categories: ["general", "resources"]
+    disabled: false
+    timeout: 10
+
+  - name: library genesis
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: library of congress
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: lobste.rs
+    categories: ["general", "forums"]
+    disabled: false
+    timeout: 10
+
+  - name: lucide
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: mankier
+    categories: ["general", "resources"]
+    disabled: false
+    timeout: 10
+
+  - name: mastodon hashtags
+    categories: ["social media"]
+    disabled: false
+    timeout: 10
+
+  - name: mastodon users
+    categories: ["social media"]
+    disabled: false
+    timeout: 10
+
+  - name: matrixrooms
+    categories: ["social media"]
+    disabled: false
+    timeout: 10
+
+  - name: mdn
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: metacpan
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: minecraft wiki
+    categories: ["general", "resources"]
+    disabled: false
+    timeout: 10
+
+  - name: mixcloud
+    categories: ["music"]
+    disabled: false
+    timeout: 10
+
+  - name: mojeek
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: mojeek images
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: mojeek news
+    categories: ["general", "news"]
+    disabled: false
+    timeout: 10
+
+  - name: nixos wiki
+    categories: ["general", "resources"]
+    disabled: false
+    timeout: 10
+
+  - name: npm
+    categories: ["repos"]
+    disabled: false
+    timeout: 10
+
+  - name: nyaa
+    categories: ["files"]
+    disabled: false
+    timeout: 10
+
+  - name: odysee
+    categories: ["videos"]
+    disabled: false
+    timeout: 10
+
+  - name: openalex
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: openclipart
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: openlibrary
+    categories: ["resources"]
+    disabled: false
+    timeout: 10
+
+  - name: openstreetmap
+    categories: ["maps"]
+    disabled: false
+    timeout: 10
+
+  - name: openverse
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: pdbe
+    categories: ["general", "resources"]
+    disabled: false
+    timeout: 10
+
+  - name: peertube
+    categories: ["videos"]
+    disabled: false
+    timeout: 10
+
+  - name: pi-hole.community
+    categories: ["general", "forums"]
+    disabled: false
+    timeout: 10
+
+  - name: pinterest
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: pixabay images
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: pixabay videos
+    categories: ["videos"]
+    disabled: false
+    timeout: 10
+
+  - name: pkg.go.dev
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: presearch
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: presearch images
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: presearch news
+    categories: ["news"]
+    disabled: false
+    timeout: 10
+
+  - name: presearch videos
+    categories: ["videos"]
+    disabled: false
+    timeout: 10
+
+  - name: pub.dev
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: public domain image archive
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: pubmed
+    categories: ["general", "resources"]
+    disabled: false
+    timeout: 10
+
+  - name: pypi
+    categories: ["packages"]
+    disabled: false
+    timeout: 10
+
+  - name: qwant
+    categories: ["general"]
+    disabled: false
+    timeout: 10
+
+  - name: qwant images
+    categories: ["images"]
+    disabled: false
+    timeout: 10
+
+  - name: qwant news
+    categories: ["news"]
+    disabled: false
+    timeout: 10
+
+  - name: qwant videos
+    disabled: false
+    timeout: 10
+
+  - name: reddit
+    disabled: false
+    timeout: 10
+
+  - name: repology
+    disabled: false
+    timeout: 10
+
+  - name: reuters
+    disabled: false
+    timeout: 10
+
+  - name: rottentomatoes
+    disabled: false
+    timeout: 10
+
+  - name: rubygems
+    disabled: false
+    timeout: 10
+
+  - name: searchcode code
+    disabled: false
+    timeout: 10
+
+  - name: searchmysite
+    disabled: false
+    timeout: 10
+
+  - name: sepiasearch
+    disabled: false
+    timeout: 10
+
+  - name: soundcloud
+    disabled: false
+    timeout: 10
+
+  - name: sourcehut
+    disabled: false
+    timeout: 10
+
+  - name: springer nature
+    disabled: false
+    timeout: 10
+
+  - name: stackoverflow
+    disabled: false
+    timeout: 10
+
+  - name: startpage
+    disabled: false
+    timeout: 10
+
+  - name: startpage images
+    disabled: false
+    timeout: 10
+
+  - name: startpage news
+    disabled: false
+    timeout: 10
+
+  - name: steam 
+    disabled: false
+    timeout: 10
+
+  - name: superuser
+    disabled: false
+    timeout: 10
+
+  - name: svgrepo
+    disabled: false
+    timeout: 10
+
+  - name: tineye
+    disabled: false
+    timeout: 10
+
+  - name: tmdb
+    disabled: false
+    timeout: 10
+
+  - name: tokyotoshokan
+    disabled: false
+    timeout: 10
+
+  - name: tootfinder
+    disabled: false
+    timeout: 10
+
+  - name: unsplash
+    disabled: false
+    timeout: 10
+
+  - name: uxwing
+    disabled: false
+    timeout: 10
+
+  - name: vimeo
+    disabled: false
+    timeout: 10
+
+  - name: voidlinux
+    disabled: false
+    timeout: 10
+
+  - name: wallhaven
+    disabled: false
+    timeout: 10
+
+  - name: wiby
+    disabled: false
+    timeout: 10
+
+  - name: wikibooks
+    disabled: false
+    timeout: 10
+
+  - name: wikicommons.audio
+    disabled: false
+    timeout: 10
+
+  - name: wikicommons.files
+    disabled: false
+    timeout: 10
+
+  - name: wikicommons.images
+    disabled: false
+    timeout: 10
+
+  - name: wikicommons.videos
+    disabled: false
+    timeout: 10
+
+  - name: wikidata
+    disabled: false
+    timeout: 10
+
+  - name: wikinews
+    disabled: false
+    timeout: 10
+
+  - name: wikipedia
+    disabled: false
+    timeout: 10
+
+  - name: wikiquote
+    disabled: false
+    timeout: 10
+
+  - name: wikisource
+    disabled: false
+    timeout: 10
+
+  - name: wikispecies
+    disabled: false
+    timeout: 10
+
+  - name: wikiversity
+    disabled: false
+    timeout: 10
+
+  - name: wikivoyage
+    disabled: false
+    timeout: 10
+
+  - name: wiktionary
+    disabled: false
+    timeout: 10
+
+  - name: youtube
+    disabled: false
+    timeout: 10
+
+  - name: z-library
+    disabled: false
+    timeout: 10
