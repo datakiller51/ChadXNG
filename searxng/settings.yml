@@ -161,7 +161,7 @@ hostnames:
     # '(.*\.)?youtu\.be$': 'yt.example.com'
     '(.*\.)?reddit(media)?\.com$': 'redlib.catsarch.com'
     '(.*\.)?redd\.it$': 'redlib.catsarch.com'
-    '(www\.)?twitter\.com$': 'nitter.net'
+    '(www\.)?(twitter|x)\.com$': 'nitter.net'
     'genius.com$': 'intellectual.catsarch.com'
   remove:
     - 'deepwiki\.(com|org)' # ai bullshit
@@ -511,10 +511,10 @@ engines:
     disabled: false
     timeout: 10
 
-  - name: mojeek
-    categories: ["general"]
-    disabled: false
-    timeout: 10
+  # - name: mojeek
+  #   categories: ["general"]
+  #   disabled: false
+  #   timeout: 10
 
   - name: mojeek images
     categories: ["images"]
@@ -522,7 +522,8 @@ engines:
     timeout: 10
 
   - name: mojeek news
-    categories: ["general", "news"]
+    # categories: ["general", "news"]
+    categories: ["news"]
     disabled: false
     timeout: 10
 
