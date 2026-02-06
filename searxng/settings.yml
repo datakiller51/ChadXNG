@@ -186,19 +186,26 @@ categories_as_tabs:
   audio:
   music:
   lyrics:
+  movies:
   news:
   maps:
   packages:
+  wikis:
   repos:
+  code:
+  dictionary:
+  books:
   resources:
   files:
+  gaming:
+  piracy:
   forums:
   social media:
 
 engines:
   - name: 1337x
     disabled: false
-    categories: ["files"]
+    categories: ["piracy"]
     weight: 2
     timeout: 10
 
@@ -231,12 +238,12 @@ engines:
     timeout: 10
 
   - name: annas archive
-    categories: ["files"]
+    categories: ["piracy", "books"]
     disabled: false
     timeout: 10
 
   - name: arch linux wiki
-    categories: ["general", "resources"]
+    categories: ["wikis"]
     weight: 2
     disabled: false
     timeout: 10
@@ -247,7 +254,7 @@ engines:
     timeout: 10
 
   - name: askubuntu
-    categories: ["general", "forums"]
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
@@ -267,7 +274,7 @@ engines:
     timeout: 10
 
   - name: caddy.community
-    categories: ["general", "forums"]
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
@@ -292,7 +299,7 @@ engines:
     timeout: 10
 
   - name: ddg definitions
-    categories: ["general"]
+    categories: ["dictionary"]
     disabled: false
     timeout: 10
 
@@ -302,17 +309,17 @@ engines:
     timeout: 10
 
   - name: devicons
-    categories: ["images", "general"]
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: dictzone
-    categories: ["general"]
+    categories: ["dictionary"]
     disabled: false
     timeout: 10
 
   - name: discuss.python
-    categories: [ "general", "forums"]
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
@@ -347,12 +354,12 @@ engines:
     timeout: 10
 
   - name: emojipedia
-    categories: ["general"]
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: findthatmeme
-    categories: ["general", "images"]
+    categories: ["images"]
     weight: 0.5
     disabled: false
     timeout: 10
@@ -373,7 +380,7 @@ engines:
     timeout: 10
 
   - name: gentoo
-    categories: ["resources"]
+    categories: ["wikis"]
     disabled: false
     timeout: 10
 
@@ -388,7 +395,7 @@ engines:
     timeout: 10
 
   - name: github code
-    categories: ["general", "repos"]
+    categories: ["code"]
     disabled: false
     timeout: 10
 
@@ -398,7 +405,7 @@ engines:
     timeout: 10
 
   - name: goodreads
-    categories: ["resources"]
+    categories: ["books"]
     disabled: false
     timeout: 10
 
@@ -418,7 +425,7 @@ engines:
     timeout: 10
 
   - name: google scholar
-    categories: ["general", "resources"]
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
@@ -428,7 +435,7 @@ engines:
     timeout: 10
 
   - name: hackernews
-    categories: ["general", "forums"]
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
@@ -438,17 +445,17 @@ engines:
     timeout: 10
 
   - name: imdb
-    categories: ["general"]
+    categories: ["movies"]
     disabled: false
     timeout: 10
 
   - name: imgur
-    categories: ["general"]
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: lib.rs
-    categories: ["general", "resources"]
+    categories: ["wikis"]
     disabled: false
     timeout: 10
 
@@ -463,7 +470,7 @@ engines:
     timeout: 10
 
   - name: lobste.rs
-    categories: ["general", "forums"]
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
@@ -473,7 +480,7 @@ engines:
     timeout: 10
 
   - name: mankier
-    categories: ["general", "resources"]
+    categories: ["wikis"]
     disabled: false
     timeout: 10
 
@@ -493,7 +500,7 @@ engines:
     timeout: 10
 
   - name: mdn
-    categories: ["resources"]
+    categories: ["wikis"]
     disabled: false
     timeout: 10
 
@@ -503,7 +510,7 @@ engines:
     timeout: 10
 
   - name: minecraft wiki
-    categories: ["general", "resources"]
+    categories: ["gaming", "wikis"]
     disabled: false
     timeout: 10
 
@@ -524,17 +531,17 @@ engines:
     timeout: 10
 
   - name: nixos wiki
-    categories: ["general", "resources"]
+    categories: ["wikis"]
     disabled: false
     timeout: 10
 
   - name: npm
-    categories: ["repos"]
+    categories: ["packages"]
     disabled: false
     timeout: 10
 
   - name: nyaa
-    categories: ["files"]
+    categories: ["piracy", "movies"]
     disabled: false
     timeout: 10
 
@@ -579,7 +586,7 @@ engines:
     timeout: 10
 
   - name: pi-hole.community
-    categories: ["general", "forums"]
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
@@ -634,7 +641,7 @@ engines:
     timeout: 10
 
   - name: pubmed
-    categories: ["general", "resources"]
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
@@ -644,165 +651,208 @@ engines:
     timeout: 10
 
   - name: reddit
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
   - name: repology
+    categories: ["packages"]
+    weight: 5
     disabled: false
     timeout: 10
 
   - name: reuters
+    categories: ["news"]
     disabled: false
     timeout: 10
 
   - name: rottentomatoes
+    categories: ["movies"]
     disabled: false
     timeout: 10
 
   - name: rubygems
+    categories: ["packages"]
     disabled: false
     timeout: 10
 
   - name: searchcode code
+    categories: ["code"]
     disabled: false
     timeout: 10
 
   - name: searchmysite
+    categories: ["general"]
     disabled: false
     timeout: 10
 
   - name: sepiasearch
+    categories: ["videos"]
     disabled: false
     timeout: 10
 
   - name: soundcloud
+    categories: ["music"]
     disabled: false
     timeout: 10
 
   - name: sourcehut
+    categories: ["repos"]
     disabled: false
     timeout: 10
 
   - name: springer nature
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: stackoverflow
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
   - name: steam 
+    categories: ["gaming"]
     disabled: false
     timeout: 10
 
   - name: superuser
+    categories: ["forums"]
     disabled: false
     timeout: 10
 
   - name: svgrepo
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: tineye
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: tmdb
+    categories: ["movies"]
     disabled: false
     timeout: 10
 
   - name: tokyotoshokan
+    categories: ["piracy", "movies"]
     disabled: false
     timeout: 10
 
   - name: tootfinder
+    categories: ["social"]
     disabled: false
     timeout: 10
 
   - name: unsplash
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: uxwing
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: vimeo
+    categories: ["videos"]
     disabled: false
     timeout: 10
 
   - name: voidlinux
+    categories: ["wikis"]
     disabled: false
     timeout: 10
 
   - name: wallhaven
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: wiby
+    categories: ["general"]
     disabled: false
     timeout: 10
 
   - name: wikibooks
+    categories: ["books"]
     disabled: false
     timeout: 10
 
   - name: wikicommons.audio
+    categories: ["audio"]
     disabled: false
     timeout: 10
 
   - name: wikicommons.files
+    categories: ["files"]
     disabled: false
     timeout: 10
 
   - name: wikicommons.images
+    categories: ["images"]
     disabled: false
     timeout: 10
 
   - name: wikicommons.videos
+    categories: ["videos"]
     disabled: false
     timeout: 10
 
   - name: wikidata
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: wikinews
+    categories: ["news"]
     disabled: false
     timeout: 10
 
   - name: wikipedia
+    categories: ["wikis"]
+    weight: 2
     disabled: false
     timeout: 10
 
   - name: wikiquote
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: wikisource
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: wikispecies
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: wikiversity
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: wikivoyage
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: wiktionary
+    categories: ["resources"]
     disabled: false
     timeout: 10
 
   - name: youtube
+    categories: ["videos"]
     disabled: false
     timeout: 10
 
   - name: z-library
+    categories: ["books", "piracy"]
     disabled: false
     timeout: 10
