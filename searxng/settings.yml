@@ -132,8 +132,8 @@ use_default_settings:
       - youtube
       - z-library
 
-redis:
-  url: redis://redis:6379/0
+valkey:
+  url: valkey://valkey:6379/0
 
 general:
   debug: false
