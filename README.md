@@ -1,5 +1,5 @@
 # ChadXNG
-
+![banner](simple-custom-fork/img/searxng.png)
 A custom SearXNG config that:
 
 - Runs in docker
