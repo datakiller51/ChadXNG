@@ -170,6 +170,7 @@ hostnames:
     - 'elderscrolls.fandom.com' # fuck fandom UESP better
     - 'fallout.fandom.com' # community wiki better
     - 'minecraft.fandom.com' # official minecraft wiki better
+    - 'grokipedia.com' # burn the shit down
   # low_priority:
   high_priority:
     - '(.*\.)?wikipedia.org$' # wikipedia my GOAT
