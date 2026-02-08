@@ -424,6 +424,7 @@ engines:
     timeout: 10
 
   - name: google scholar
+    weight: 2.5
     categories: ["resources"]
     disabled: false
     timeout: 10
@@ -550,6 +551,7 @@ engines:
     timeout: 10
 
   - name: openalex
+    weight: 3
     categories: ["resources"]
     disabled: false
     timeout: 10
@@ -560,6 +562,7 @@ engines:
     timeout: 10
 
   - name: openlibrary
+    weight: 3
     categories: ["resources"]
     disabled: false
     timeout: 10
@@ -641,6 +644,7 @@ engines:
 
   - name: pubmed
     categories: ["resources"]
+    weight: 5
     disabled: false
     timeout: 10
 
