@@ -206,656 +206,656 @@ engines:
     disabled: false
     categories: ["piracy"]
     weight: 2
-    timeout: 10
+    timeout: 20
 
   - name: adobe stock
     categories: ["images", "videos"]
     weight: 0.5
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: adobe stock audio
     categories: ["audio"]
     weight: 0.5
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: adobe stock video
     categories: ["videos"]
     weight: 0.5
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: alpine linux packages
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: anaconda
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: annas archive
     categories: ["piracy", "books"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: arch linux wiki
     categories: ["wikis"]
     weight: 2
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: artstation
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: askubuntu
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: bandcamp
     categories: ["music"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: bitbucket
     categories: ["repos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: cachy os packages
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: caddy.community
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: codeberg
     categories: ["repos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: crates.io
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: currency
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: dailymotion
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: ddg definitions
     categories: ["dictionary"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: deezer
     categories: ["music"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: devicons
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: dictzone
     categories: ["dictionary"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: discuss.python
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: docker hub
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: duckduckgo
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: duckduckgo images
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: duckduckgo news
     categories: ["news"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: duckduckgo videos
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: duckduckgo weather
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: emojipedia
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: findthatmeme
     categories: ["images"]
     weight: 0.5
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: flickr
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: free software directory
     categories: ["repos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: genius
     categories: ["lyrics"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: gentoo
     categories: ["wikis"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: gitea.com
     categories: ["repos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: github
     categories: ["repos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: github code
     categories: ["code"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: gitlab
     categories: ["repos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: goodreads
     categories: ["books"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: google
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: google images
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: google news
     categories: ["news"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: google scholar
     weight: 2.5
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: google videos
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: hackernews
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: hoogle
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: imdb
     categories: ["movies"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: imgur
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: lib.rs
     categories: ["wikis"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: library genesis
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: library of congress
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: lobste.rs
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: lucide
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: mankier
     categories: ["wikis"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: mastodon hashtags
     categories: ["social media"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: mastodon users
     categories: ["social media"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: matrixrooms
     categories: ["social media"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: mdn
     categories: ["wikis"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: metacpan
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: minecraft wiki
     categories: ["gaming", "wikis"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: mixcloud
     categories: ["music"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: mojeek images
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: mojeek news
     # categories: ["general", "news"]
     categories: ["news"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: nixos wiki
     categories: ["wikis"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: npm
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: nyaa
     categories: ["piracy", "movies"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: odysee
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: openalex
     weight: 3
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: openclipart
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: openlibrary
     weight: 3
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: openstreetmap
     categories: ["maps"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: openverse
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pdbe
     categories: ["general", "resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: peertube
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pi-hole.community
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pinterest
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pixabay images
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pixabay videos
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pkg.go.dev
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: presearch
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: presearch images
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: presearch news
     categories: ["news"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: presearch videos
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pub.dev
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: public domain image archive
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pubmed
     categories: ["resources"]
     weight: 5
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: pypi
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: reddit
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: repology
     categories: ["packages"]
     weight: 5
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: reuters
     categories: ["news"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: rottentomatoes
     categories: ["movies"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: rubygems
     categories: ["packages"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: searchcode code
     categories: ["code"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: searchmysite
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: sepiasearch
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: soundcloud
     categories: ["music"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: sourcehut
     categories: ["repos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: springer nature
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: stackoverflow
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: steam 
     categories: ["gaming"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: superuser
     categories: ["forums"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: svgrepo
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: tineye
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: tmdb
     categories: ["movies"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: tokyotoshokan
     categories: ["piracy", "movies"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: tootfinder
     categories: ["social"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: unsplash
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: uxwing
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: vimeo
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: voidlinux
     categories: ["wikis"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wallhaven
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wiby
     categories: ["general"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikibooks
     categories: ["books"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikicommons.audio
     categories: ["audio"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikicommons.files
     categories: ["files"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikicommons.images
     categories: ["images"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikicommons.videos
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikidata
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikinews
     categories: ["news"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikipedia
     categories: ["wikis"]
     weight: 2
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikiquote
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikisource
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikispecies
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikiversity
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wikivoyage
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: wiktionary
     categories: ["resources"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: youtube
     categories: ["videos"]
     disabled: false
-    timeout: 10
+    timeout: 20
 
   - name: z-library
     categories: ["books", "piracy"]
     disabled: false
-    timeout: 10
+    timeout: 20
