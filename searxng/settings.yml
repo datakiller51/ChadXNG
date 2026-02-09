@@ -624,6 +624,7 @@ engines:
 
   - name: presearch news
     categories: ["news"]
+    weight: 0.5
     disabled: false
     timeout: 20
 
