@@ -23,13 +23,10 @@ services:
       - valkey-data2:/data
 
   searxng:
+    network_mode: "service:gluetun"
     container_name: searxng
     image: docker.io/searxng/searxng:latest
     restart: unless-stopped
-    networks:
-      - searxng
-    ports:
-      - "127.0.0.1:8080:8080"
     volumes:
       - ./searxng:/etc/searxng
       - ./simple-custom-fork:/usr/local/searxng/searx/static/themes/simple
@@ -37,16 +34,44 @@ services:
     environment:
       - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
       - SEARXNG_SECRET=$SEARXNG_SECRET
-    develop:
-      watch:
-        - action: sync+restart
-          path: ./searxng
-          target: /etc/searxng
-        - action: sync+restart 
-          path: ./simple-custom-fork
-          target: /usr/local/searxng/searx/static/themes/simple
-        - action: restart
-          path: ./docker-compose.yaml
+    # this currently doesn't work for some reason?
+    # see https://www.reddit.com/r/docker/comments/1qz22a5/almost_pulling_my_hair_out_trying_to_figure_out/
+    # https://forums.docker.com/t/almost-pulling-my-hair-out-trying-to-figure-out-docker-watch/151061/3
+    # develop:
+    #   watch:
+    #     - action: sync+restart
+    #       path: ./searxng
+    #       target: /etc/searxng
+    #       initial_sync: true
+    #     - action: sync+restart 
+    #       path: ./simple-custom-fork
+    #       target: /usr/local/searxng/searx/static/themes/simple
+    #       initial_sync: true
+    #     - action: restart
+    #       path: ./docker-compose.yaml
+
+  gluetun:
+    image: qmcgaw/gluetun:latest
+    container_name: gluetun
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - 8080:8080/tcp # HTTP proxy
+    volumes:
+      - /gluetun:/gluetun
+    environment:
+      # See https://github.com/qdm12/gluetun-wiki/tree/main/setup#setup
+      - VPN_SERVICE_PROVIDER=protonvpn
+      - VPN_TYPE=wireguard
+      # Wireguard:
+      - WIREGUARD_PRIVATE_KEY=${WIREGUARD_PRIVATE_KEY}
+      # - TZ=
+      # Server list updater
+      # See https://github.com/qdm12/gluetun-wiki/blob/main/setup/servers.md#update-the-vpn-servers-list
+      - UPDATER_PERIOD=24h
+      - FREE_ONLY=on
 
 networks:
   searxng:
