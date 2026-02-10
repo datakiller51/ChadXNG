@@ -3,13 +3,10 @@
 A custom SearXNG config that:
 
 - Runs in docker
-- Currently only for local use only with http, I'm extremely shit at networking stuff hence no public config or HTTPS
-  shenanigans yet.
+- Supports HTTPS
 - BANS GENERATIVE AI DOMAINS!!!!  If you don't like it don't use this. If you want AI SLOP then fork this
 - Uses privacy-friendly frontends if it's feasible and mostly usable
-- Currently doesn't run over VPN/Tor, so your IP will be leaked to the services it will try to use, I didn't create this
-  with privacy in mind (subject to change), I created this because custom search engines is probably the only way to get
-  good results without AI SLOP nowadays
+- Uses ProtonVPN free tier as a network proxy
 
 # Notes people may wanna know:
 
@@ -43,6 +40,20 @@ For more info on how stuff is handled, just check out the settings.yml file
 
 - copy .env.example file to .env
 - change SEARXNG_SECRET, original README suggested using the string generated from the `openssl rand -hex 32` command
+- [Get your ProtonVPN WireGuard key](https://protonvpn.com/support/wireguard-configurations) and change
+  WIREGUARD_PRIVATE_KEY
 - run the docker compose
+
+HTTP runs on 8080 and HTTPS run on 8888
+
+Example [Firefox policy](https://mozilla.github.io/policy-templates/#policiesjson-96):
+
+```json
+{
+    "Alias": "@sx",
+    "Name": "ChadXNG",
+    "URLTemplate": "https://localhost:8888/search?q={searchTerms}"
+}
+```
 
 ![gallery](Pictures/gallery.png)
